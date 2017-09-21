@@ -17,7 +17,7 @@
     </head>
     <body>
       <body>
-        <div class="arrow-container"></div>
+        <a href="#section-a"><div class="arrow-container"></div></a>
         <!-- HEADER IMAGE-->
         <div id="showcase">
             <div class="pull-right showcase-container">
@@ -37,9 +37,13 @@
         <!-- NAV -->
         <nav class="navbar navbar-dark bg-light">
           <a class="navbar-brand" href="#">ABC CREATIONS</a>
+          <a class="navbar-brand-hide" href="#">ABOUT US</a>
+          <a class="navbar-brand-hide" href="#">LEARN MORE</a>
+          <a class="navbar-brand-hide" href="#">CONTACT US</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
 
         </nav>
 
@@ -47,16 +51,28 @@
         <!-- MIDDLE CONTENT -->
         <section id="section-a">
           <div class="jumbotron">
-            <h2 class="display-3">SECOND SECTION HEADER</h2>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+            <h4 class="display-3 second-header">SECOND SECTION HEADER</h4>
+            <hr id="right" width="30%" class="vert-1">
+            <img class="image2" src="img/image2.jpg">
+            <hr id="left" width="30%" class="vert-2">
+          </div>
+
+
+          <div class="jumbotron">
+
+              <a class="lead lead-bold">FOOTER TITLE</a>
+              <a class="lead">Footer link 1</a>
+              <a class="lead">Footer link 2</a>
+              <a class="lead">Footer link 3</a>
+              <a class="lead">Footer link 4</a>
           </div>
         </section>
 
 
-        <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

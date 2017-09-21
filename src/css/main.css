@@ -8,17 +8,24 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
+nav {
+  -moz-box-shadow:    3px 3px 5px 1px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+  box-shadow:         3px 3px 5px 1px #ccc;
+}
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+a{
+  color: black;
+}
+a:hover{
+  color: black;
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 2px solid #00362e;
     margin: 1em 0;
     padding: 0;
 }
@@ -88,7 +95,7 @@ textarea {
      url("../img/image1.jpg");
      background-size:cover;
      background-position:center;
-     height:100vh;
+     height:90vh;
      display:flex;
      flex-direction:column;
      justify-content:center;
@@ -153,12 +160,18 @@ textarea {
      background: url(../img/arrow.png);
      margin-top: 0px;
      position: absolute;
-     top: 90%;
+     top: 80%;
      left: 50%;
      width: 10px;
      height: 10%;
      background-repeat: no-repeat;
      z-index: 20;
+     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
    }
 
  /* ==========================================================================
@@ -174,8 +187,14 @@ textarea {
     }
 
     .navbar-brand{
-      color: black!important;
+      color: #103b58!important;
       font-family: 'Karla', sans-serif;
+    }
+    .navbar-click{
+      height: 300px;
+    }
+    .navbar-brand-hide{
+      display:none;
     }
 
 /* ==========================================================================
@@ -185,7 +204,73 @@ textarea {
     .jumbotron {
       background-color: transparent!important;
     }
+    h4.second-header{
+      font-size: 30px;
+      font-family: 'Karla', sans-serif;
+      padding-bottom: 30px;
+    }
+    .image2{
+      width: 70%;
+      height: 100%;
+    }
+    .lead {
+      display: block;
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+    }
+    a.lead{
+      color: #00362e!important;
+    }
+    a.lead:hover{
 
+      font-size: 30px;
+
+    }
+    .lead-bold{
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .vert-1{
+      width: 64%;
+      margin-left: 18%;
+    }
+    .vert-1-after{
+      transform:rotate(60deg);
+      -ms-transform:rotate(60deg);
+      /* IE 9 */
+      -webkit-transform:rotate(60deg);
+      /* Safari and Chrome */
+      position: absolute;
+      left: 64%;
+      margin-top: 100px;
+      -webkit-animation-name: lines; /* Safari 4.0 - 8.0 */
+       -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+       -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+       animation-name: lines;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+
+    }
+    .vert-2-after{
+      transform:rotate(60deg);
+      -ms-transform:rotate(60deg);
+      /* IE 9 */
+      -webkit-transform: rotate(60deg);
+      position: absolute;
+      left: 8%;
+      margin-top: -10px;
+      -webkit-animation-name: left-lines; /* Safari 4.0 - 8.0 */
+       -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+       -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+       animation-name: left-lines;
+       animation-duration: 4s;
+       animation-iteration-count: infinite;
+    }
+
+    .vert-2{
+      width: 64%;
+      margin-left: 18%;
+    }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -265,11 +350,23 @@ textarea {
   .showcase-container{
       left: 40%;
     }
+
+    .vert-1{
+      margin-top: 80px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .showcase-container{
       left: 25%;
+    }
+
+    .vert-1{
+      margin-top: 70px;
+    }
+
+    .navbar-brand-hide {
+      font-size: 14px;
     }
 }
 
@@ -279,4 +376,69 @@ textarea {
       left: 3%;
     }
 
+    .vert-1{
+      margin-top: 40px;
+    }
+
+    .vert-2{
+      margin-top: -10px;
+    }
+
+    .navbar-brand-hide {
+      font-size: 12px;
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   { top:80%;}
+  25%  { top:82%;}
+  50%  { top:80%;}
+  75%  { top:82%;}
+  100% { top:80%;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   { top:80%;}
+  25%  { top:82%;}
+  50%  { top:80%;}
+  75%  { top:82%;}
+  100% { top:80%;}
+}
+
+
+@-webkit-keyframes lines {
+  0%   { left:64%;}
+  25%  { left:64.2%;}
+  50%  { left:64%;}
+  75%  { left:64.2%;}
+  100% { left:64%;}
+}
+
+/* Standard syntax */
+@keyframes lines {
+  0%   { left:64%;}
+  25%  { left:64.2%;}
+  50%  { left:64%;}
+  75%  { left:64.2%;}
+  100% { left:64%;}
+}
+
+@-webkit-keyframes left-lines {
+  0%   { left:8%;}
+  25%  { left:8.2%;}
+  50%  { left:8%;}
+  75%  { left:8.2%;}
+  100% { left:8%;}
+}
+
+/* Standard syntax */
+@keyframes left-lines {
+  0%   { left:8%;}
+  25%  { left:8.2%;}
+  50%  { left:8%;}
+  75%  { left:8.2%;}
+  100% { left:8%;}
 }
