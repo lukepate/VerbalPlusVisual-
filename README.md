@@ -13,6 +13,8 @@ Choose one of the following options:
 
 2. NPM install
 
+3. NPM run gulp
+
 
 
 ## Browser support

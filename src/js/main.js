@@ -1,16 +1,16 @@
 $( document ).ready(function() {
     console.log( "ready!" );
-
+  // Hamburger Icon Event
   $('.navbar-toggler-icon').click(function(){
     $('nav').toggleClass("navbar-click");
     $('.navbar-brand-hide').toggle();
 
   });
 
+  // Scroll Event
   $(window).on('scroll', function() {
       var scrollPosition = $(this).scrollTop();
       if (scrollPosition >= 715) {
-          // If the function is only supposed to fire once
           $('nav').addClass("fixed-top");
 
           $('#left').removeClass("vert-2");
@@ -22,5 +22,4 @@ $( document ).ready(function() {
         $('nav').removeClass("fixed-top");
       }
   });
-
 });
